@@ -1,6 +1,12 @@
+// Just a testing file. Ignore it, but don't delete it.
+
 import React from 'react';
 import { Box, Text, Heading, Center, Button } from 'native-base';
-import Animated, { useAnimatedStyle, useSharedValue } from 'react-native-reanimated';
+import Animated, {
+    useAnimatedStyle,
+    useSharedValue,
+    withSpring
+} from 'react-native-reanimated';
 
 const AnimatedCenter = Animated.createAnimatedComponent(Center);
 
@@ -10,9 +16,11 @@ const AnimatedBox = () => {
 
     const animatedStyle = useAnimatedStyle(() => {
         return {
-            transform: [{
-                translateX: randomPosition.value
-            }]
+            transform: [
+                {
+                    translateX: randomPosition.value
+                }
+            ]
         };
     });
 
@@ -26,10 +34,26 @@ const AnimatedBox = () => {
             <Button
                 onPress={() => {
                     console.log("Moving...");
-                    randomPosition.value = Math.random() * 350;
+                    randomPosition.value = withSpring(Math.random() * 350);
                 }}
             >
-                Move
+                Right
+            </Button>
+            <Button
+                onPress={() => {
+                    console.log("Moving...");
+                    randomPosition.value = withSpring(Math.random() * -350);
+                }}
+            >
+                Left
+            </Button>
+            <Button
+                onPress={() => {
+                    console.log("Reseting...");
+                    randomPosition.value = withSpring(0);
+                }}
+            >
+                Reset
             </Button>
         </Center>
     );

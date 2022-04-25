@@ -1,8 +1,5 @@
 import React from 'react';
 import { Center, Heading } from 'native-base';
-import Animated, {} from 'react-native-reanimated';
-
-const AnimatedCenter = Animated.createAnimatedComponent(Center);
 
 const SectionTitle = ({ title }) => {
 
@@ -11,7 +8,7 @@ const SectionTitle = ({ title }) => {
     }
 
     return (
-        <AnimatedCenter
+        <Center
             textAlign={"center"}
             size={"100%"}
             bgColor={"darkBlue.900"}
@@ -22,7 +19,7 @@ const SectionTitle = ({ title }) => {
             >
                 {"\u300E" + title + "\u300F"}
             </Heading>
-        </AnimatedCenter>
+        </Center>
     );
 };
 

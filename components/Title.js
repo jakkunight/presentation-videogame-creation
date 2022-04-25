@@ -1,9 +1,5 @@
 import React from 'react';
 import { Center, Heading } from 'native-base';
-import Animated, {
-    SlideOutRight,
-    Layout
-} from 'react-native-reanimated';
 
 /* 
     We have three "events" or "states" for the animated components in general:
@@ -11,8 +7,6 @@ import Animated, {
         2 - The "Modification" (Re-render, but still existing) Referenced by layout prop.
         3 - The "Destruction" (Last render, but doesn't exists anymore) Referenced by exiting prop.
 */
-
-const AnimatedCenter = Animated.createAnimatedComponent(Center);
 
 const Title = ({ title, subtitle }) => {
 
@@ -24,12 +18,10 @@ const Title = ({ title, subtitle }) => {
     }
 
     return (
-        <AnimatedCenter
+        <Center
             size={"100%"}
             textAlign={"center"}
             bgColor={"darkBlue.900"}
-            exiting={SlideOutRight}
-            layout={Layout.springify()}
         >
             <Heading color={"green.500"} size={"4xl"} >
                 {"\u300E" + title + "\u300F"}
@@ -37,7 +29,7 @@ const Title = ({ title, subtitle }) => {
             <Heading color={"white"} size={"xl"} >
                 {"\u300C" + subtitle + "\u300D"}
             </Heading>
-        </AnimatedCenter>
+        </Center>
     );
 };
 

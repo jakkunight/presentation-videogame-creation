@@ -17,7 +17,7 @@ const TitleContent = ({ title, paragraphs }) => {
             {
                 paragraphs.map((paragraph, key) => {
                     return (
-                        <HStack key={key} >
+                        <HStack key={key} space={5} >
                             <Icon
                                 as={Entypo}
                                 name={"moon"}

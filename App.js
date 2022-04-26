@@ -3,6 +3,7 @@ import { NativeBaseProvider } from 'native-base';
 import Navigator from './components/navigator/Navigator';
 import Screen from './components/navigator/Screen';
 import Title from './components/Title';
+import TitleContent from './components/TitleContent';
 
 // LayoutAnimations are only aviable on mobile!!!
 
@@ -22,7 +23,7 @@ const App = () => {
         }} exit={{
           opacity: 0
         }} prev={0} next={1} >
-          <Title title={"Creaci\u00F3n de Videojuegos"} subtitle={"ft. Construct 2"} />
+          <TitleContent />
         </Screen>
         <Screen id={1} initial={{
           opacity: 0

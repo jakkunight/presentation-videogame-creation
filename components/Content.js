@@ -7,7 +7,7 @@ const Content = ({ paragraphs }) => {
     const screenSize = useWindowDimensions();
 
     return (
-        <VStack w={screenSize.width} h={screenSize.height} bgColor={"darkBlue.900"} >
+        <VStack w={screenSize.width} h={screenSize.height} p={"5%"} bgColor={"darkBlue.900"} space={5} >
             {
                 paragraphs.map((paragraph, key) => {
                     return (
@@ -16,9 +16,9 @@ const Content = ({ paragraphs }) => {
                                 as={Entypo}
                                 name={"moon"}
                                 color={"yellow.400"}
-                                size={"lg"}
+                                size={"2xl"}
                             />
-                            <Text size={"20pt"} color={"white"} >
+                            <Text fontSize={"2xl"} color={"white"} >
                                 {paragraph}
                             </Text>
                         </HStack>

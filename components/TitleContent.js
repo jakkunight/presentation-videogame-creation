@@ -8,9 +8,9 @@ const TitleContent = ({ title, paragraphs }) => {
     const screenSize = useWindowDimensions();
 
     return (
-        <VStack w={screenSize.width} h={screenSize.height} bgColor={"darkBlue.900"} >
+        <VStack w={screenSize.width} h={screenSize.height} p={"5%"} bgColor={"darkBlue.900"} space={5} >
             <Box>
-                <Heading size={"2xl"} color={"green.500"} >
+                <Heading fontSize={"6xl"} color={"green.500"} >
                     {title}
                 </Heading>
             </Box>
@@ -22,9 +22,9 @@ const TitleContent = ({ title, paragraphs }) => {
                                 as={Entypo}
                                 name={"moon"}
                                 color={"yellow.400"}
-                                size={"lg"}
+                                size={"2xl"}
                             />
-                            <Text size={"20pt"} color={"white"} >
+                            <Text fontSize={"2xl"} color={"white"} >
                                 {paragraph}
                             </Text>
                         </HStack>

@@ -12,11 +12,11 @@ const Code = ({ lines }) => {
                 lines.map((line, key) => {
                     <HStack space={2} key={key} >
                         <Box w={"5%"} textAlign={"center"} >
-                            <Text color={"green.500"} >
+                            <Text color={"green.500"} fontSize={"2xl"} >
                                 {key}
                             </Text>
                         </Box>
-                        <Text color={"white"} >
+                        <Text color={"white"} fontSize={"2xl"} >
                             {line}
                         </Text>
                     </HStack>

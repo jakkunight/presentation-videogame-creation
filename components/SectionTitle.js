@@ -1,7 +1,10 @@
 import React from 'react';
 import { Center, Heading } from 'native-base';
+import { useWindowDimensions } from 'react-native';
 
 const SectionTitle = ({ title }) => {
+
+    const screenSize = useWindowDimensions();
 
     if(!title){
         title = "Title";

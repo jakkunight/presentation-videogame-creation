@@ -2,7 +2,7 @@
   "name": "presentiation-videogame-creation",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
-  "homepage": "/root/Desktop/presentiation-videogame-creation/web-build/",
+  "homepage": "https://jakkunight.github.io/presentiation-videogame-creation/",
   "author": "Jakku Night",
   "scripts": {
     "start": "expo start",

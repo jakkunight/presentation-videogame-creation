@@ -1,9 +1,12 @@
 import React, { useState, Children, useEffect } from 'react';
+import { useWindowDimensions } from 'react-native';
+import { Box } from 'native-base';
 import Router from './Router';
 
 const Navigator = ({ children, homeScreenId }) => {
 
     const [ activeScreen, setActiveScreen ] = useState(homeScreenId);
+    const screenSize = useWindowDimensions();
     const loadScreens = () => {
         let components = Children.toArray(children);
         let aux = [];
@@ -36,7 +39,9 @@ const Navigator = ({ children, homeScreenId }) => {
 
     return (
         <Router.Provider value={data} >
-            {children}
+            <Box bgColor={"black"} w={screenSize.width} h={screenSize.height} >
+                {children}
+            </Box>
         </Router.Provider>
     );
 };

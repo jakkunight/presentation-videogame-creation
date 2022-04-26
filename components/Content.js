@@ -14,8 +14,8 @@ const Content = ({ paragraphs }) => {
                         <HStack key={key} space={5} >
                             <Icon
                                 as={Entypo}
-                                name={"moon"}
-                                color={"yellow.400"}
+                                name={"game-controller"}
+                                color={"primary.400"}
                                 size={"2xl"}
                             />
                             <Text fontSize={"2xl"} color={"white"} >

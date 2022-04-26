@@ -18,7 +18,7 @@ const App = () => {
         <NativeBaseProvider>
             <Navigator homeScreenId={0} >
                 <Screen
-                    id={0} prev={0} next={1} initial={INITIAL.Fade} animate={ANIMATE.Fade} exit={EXIT.Fade} >
+                    id={0} prev={0} next={1} initial={INITIAL.SlideToUp} animate={ANIMATE.SlideToUp} exit={EXIT.SlideToUp} >
                     <Title title={"Creaci\u00F3n de Videojuegos"} subtitle={"ft. Construct 2"} />
                 </Screen>
                 <Screen
@@ -26,7 +26,7 @@ const App = () => {
                     <SectionTitle title={"Introducci\u00F3n"} />
                 </Screen>
                 <Screen
-                    id={2} prev={1} next={3} initial={INITIAL.Fade} animate={ANIMATE.Fade} exit={EXIT.Fade} >
+                    id={2} prev={1} next={3} initial={INITIAL.SlideToLeft} animate={ANIMATE.SlideToLeft} exit={EXIT.SlideToLeft} >
                     <TitleContent
                         title={"Sobre m\u00ED:"}
                         paragraphs={[
@@ -41,11 +41,11 @@ const App = () => {
                     />
                 </Screen>
                 <Screen
-                    id={3} prev={2} next={4} initial={INITIAL.Fade} animate={ANIMATE.Fade} exit={EXIT.Fade} >
+                    id={3} prev={2} next={4} initial={INITIAL.Zoom} animate={ANIMATE.Zoom} exit={EXIT.Zoom} >
                     <SectionTitle title={"Motivaci\u00F3n"} />
                 </Screen>
                 <Screen
-                    id={4} prev={3} next={5} initial={INITIAL.Fade} animate={ANIMATE.Fade} exit={EXIT.Fade} >
+                    id={4} prev={3} next={5} initial={INITIAL.SlideToDown} animate={ANIMATE.SlideToDown} exit={EXIT.SlideToDown} >
                     <TitleContent
                         title={"¿Por qu\u00E9 nos divertimos?"}
                         paragraphs={[

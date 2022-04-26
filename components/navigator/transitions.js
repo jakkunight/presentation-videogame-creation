@@ -9,9 +9,7 @@ const ANIMATE = {};
 INITIAL.Fade = {
     opacity: 0
 };
-EXIT.Fade = {
-    opacity: 1
-};
+EXIT.Fade = {};
 ANIMATE.Fade = {
     opacity: 1,
     transition: {
@@ -21,9 +19,7 @@ ANIMATE.Fade = {
 INITIAL.SlideToRight = {
     translateX: -screenSize.width
 };
-EXIT.SlideToRight = {
-    translateX: screenSize.width
-};
+EXIT.SlideToRight = {};
 ANIMATE.SlideToRight = {
     translateX: 0,
     transition: {
@@ -33,9 +29,7 @@ ANIMATE.SlideToRight = {
 INITIAL.SlideToLeft = {
     translateX: screenSize.width
 };
-EXIT.SlideToLeft = {
-    translateX: -screenSize.width
-};
+EXIT.SlideToLeft = {};
 ANIMATE.SlideToLeft = {
     translateX: 0,
     transition: {
@@ -45,9 +39,7 @@ ANIMATE.SlideToLeft = {
 INITIAL.SlideToUp = {
     translateY: -screenSize.height
 };
-EXIT.SlideToUp = {
-    translateY: screenSize.height
-};
+EXIT.SlideToUp = {};
 ANIMATE.SlideToUp = {
     translateY: 0,
     transition: {
@@ -57,9 +49,7 @@ ANIMATE.SlideToUp = {
 INITIAL.SlideToDown = {
     translateY: screenSize.height
 };
-EXIT.SlideToDown = {
-    translateY: -screenSize.height
-};
+EXIT.SlideToDown = {};
 ANIMATE.SlideToDown = {
     translateY: 0,
     transition: {
@@ -69,9 +59,7 @@ ANIMATE.SlideToDown = {
 INITIAL.RotateClockwise = {
     rotate: "0deg"
 };
-EXIT.RotateClockwise = {
-    rotate: "0deg"
-};
+EXIT.RotateClockwise = {};
 ANIMATE.RotateClockwise = {
     rotation: "-360deg",
     transition: {
@@ -81,9 +69,7 @@ ANIMATE.RotateClockwise = {
 INITIAL.RotateCounterClockwise = {
     rotate: "0deg"
 };
-EXIT.RotateCounterClockwise = {
-    rotate: "0deg"
-};
+EXIT.RotateCounterClockwise = {};
 ANIMATE.RotateCounterClockwise = {
     rotation: "360deg",
     transition: {
@@ -93,9 +79,7 @@ ANIMATE.RotateCounterClockwise = {
 INITIAL.Zoom = {
     scale: 0
 };
-EXIT.Zoom = {
-    scale: 0
-};
+EXIT.Zoom = {};
 ANIMATE.Zoom = {
     scale: 1,
     transition: {

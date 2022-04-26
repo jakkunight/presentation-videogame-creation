@@ -10,7 +10,8 @@ const SectionTitle = ({ title }) => {
     return (
         <Center
             textAlign={"center"}
-            size={"100%"}
+            w={screenSize.width}
+            h={screenSize.height}
             bgColor={"darkBlue.900"}
         >
             <Heading

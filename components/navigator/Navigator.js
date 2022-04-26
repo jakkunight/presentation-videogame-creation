@@ -1,43 +1,44 @@
-import React, { createContext, useEffect, useState, Children } from 'react';
-import { Center } from 'native-base';
-import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
+import React, { useState, Children, useEffect } from 'react';
 import Router from './Router';
 
-const Navigator = ({ children }) => {
+const Navigator = ({ children, homeScreenId }) => {
 
-    const [ active, setActive ] = useState(0);
-
-    const navigate = async (screen_id) => {
-        setActive(screen_id);
+    const [ activeScreen, setActiveScreen ] = useState(homeScreenId);
+    const loadScreens = () => {
+        let components = Children.toArray(children);
+        let aux = [];
+        for(let i = 0; i < components.length; i++){
+            if(i !== activeScreen){
+                aux = [...aux, false];
+            }else{
+                aux = [...aux, true];
+            }
+        }
+        return aux;
     };
-
+    const [ screens, setScreens ] = useState(loadScreens());
+    const navigate = async (screenId) => {
+        let aux = screens;
+        aux[activeScreen] = false;
+        aux[screenId] = true;
+        setActiveScreen(screenId);
+        setScreens(aux);
+    };
+    useEffect(() => {
+        setScreens(loadScreens());
+        console.log("Navigator Screens:", screens);
+    }, []);
     const data = {
-        setActive,
-        active
+        navigate,
+        screens,
+        activeScreen
     };
 
     return (
         <Router.Provider value={data} >
-            {
-                Children.map(children, (child, index) => {
-                    if(index === active){
-                        return (
-                            <Animated.View
-                                entering={FadeIn}
-                                exiting={FadeOut}
-                                style={{
-                                    width: "100%",
-                                    height: "100%"
-                                }}
-                            >
-                                { child.type() }
-                            </Animated.View>
-                        );
-                    }
-                })
-            }
+            {children}
         </Router.Provider>
     );
 };
 
-export { Navigator, Router };
+export default Navigator;

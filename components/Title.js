@@ -1,4 +1,5 @@
 import React from 'react';
+import { useWindowDimensions } from 'react-native';
 import { Center, Heading } from 'native-base';
 
 /* 
@@ -17,9 +18,12 @@ const Title = ({ title, subtitle }) => {
         subtitle = "Subtitle"
     }
 
+    const screenSize = useWindowDimensions();
+
     return (
         <Center
-            size={"100%"}
+            w={screenSize.width}
+            h={screenSize.height}
             textAlign={"center"}
             bgColor={"darkBlue.900"}
         >

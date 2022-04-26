@@ -8,7 +8,6 @@ const Screen = ({ children, initial, animate, exit, id, next, prev }) => {
 
     const context = useContext(Router);
     const screenSize = useWindowDimensions();
-    //const [ visible, setVisible ] = useState(context.screens[id]);
 
     useEffect(() => {
         console.log("Screen:", id, "Status:", context.screens[id]);

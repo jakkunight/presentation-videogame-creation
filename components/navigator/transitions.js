@@ -1,6 +1,6 @@
 import { Dimensions } from "react-native";
 
-const screenSize = Dimensions.get("window");
+const screenSize = Dimensions.get("screen");
 
 const INITIAL = {};
 const EXIT = {};
@@ -10,12 +10,11 @@ INITIAL.Fade = {
     opacity: 0
 };
 EXIT.Fade = {
-    opacity: 0
+    opacity: 1
 };
 ANIMATE.Fade = {
     opacity: 1,
     transition: {
-        useNativeDriver: false,
         duration: 2000
     }
 };
@@ -28,7 +27,6 @@ EXIT.SlideToRight = {
 ANIMATE.SlideToRight = {
     translateX: 0,
     transition: {
-        useNativeDriver: false,
         duration: 2000
     }
 };
@@ -41,7 +39,6 @@ EXIT.SlideToLeft = {
 ANIMATE.SlideToLeft = {
     translateX: 0,
     transition: {
-        useNativeDriver: false,
         duration: 2000
     }
 };
@@ -54,7 +51,6 @@ EXIT.SlideToUp = {
 ANIMATE.SlideToUp = {
     translateY: 0,
     transition: {
-        useNativeDriver: false,
         duration: 2000
     }
 };
@@ -67,7 +63,6 @@ EXIT.SlideToDown = {
 ANIMATE.SlideToDown = {
     translateY: 0,
     transition: {
-        useNativeDriver: false,
         duration: 2000
     }
 };
@@ -80,7 +75,6 @@ EXIT.RotateClockwise = {
 ANIMATE.RotateClockwise = {
     rotation: "-360deg",
     transition: {
-        useNativeDriver: false,
         duration: 2000
     }
 };
@@ -93,7 +87,6 @@ EXIT.RotateCounterClockwise = {
 ANIMATE.RotateCounterClockwise = {
     rotation: "360deg",
     transition: {
-        useNativeDriver: false,
         duration: 2000
     }
 };
@@ -106,7 +99,6 @@ EXIT.Zoom = {
 ANIMATE.Zoom = {
     scale: 1,
     transition: {
-        useNativeDriver: false,
         duration: 2000
     }
 };

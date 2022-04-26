@@ -41,11 +41,11 @@ const App = () => {
                     />
                 </Screen>
                 <Screen
-                    id={3} prev={2} next={4} initial={INITIAL.SlideToRight} animate={ANIMATE.SlideToRight} exit={EXIT.SlideToRight} >
+                    id={3} prev={2} next={4} initial={INITIAL.Fade} animate={ANIMATE.Fade} exit={EXIT.Fade} >
                     <SectionTitle title={"Motivaci\u00F3n"} />
                 </Screen>
                 <Screen
-                    id={4} prev={3} next={5} initial={INITIAL.RotateClockwise} animate={ANIMATE.RotateClockwise} exit={EXIT.RotateClockwise} >
+                    id={4} prev={3} next={5} initial={INITIAL.Fade} animate={ANIMATE.Fade} exit={EXIT.Fade} >
                     <TitleContent
                         title={"¿Por qu\u00E9 nos divertimos?"}
                         paragraphs={[
@@ -60,16 +60,16 @@ const App = () => {
                     />
                 </Screen>
                 <Screen
-                    id={5} prev={4} next={6} initial={INITIAL.Zoom} animate={ANIMATE.Zoom} exit={EXIT.Zoom} >
+                    id={5} prev={4} next={6} initial={INITIAL.Fade} animate={ANIMATE.Fade} exit={EXIT.Fade} >
                     <TitleContent
                         title={"¿Por d\u00F3nde iniciar?"}
                         paragraphs={[
-                            `Lo mejor es y ser\u00E1 siempre el cd\u00F3igo. Todo videojuego, pasa por el c\u00F3digo sin falta, ya que es lo que mueve el juego y los programas utilizados durante el desarrollo. Por lo general, para no perder tiempo en el proceso y ahorrar gastos innecesarios, las empresas utilizan lo que se llama un "game engine" o "motor de juego", el cual es un software que realiza ciertas tareas b\u00E1sicas de los videojuegos por nosotros adem\u00E1s nos deja implementar nuestras mejoras sobre plantillas de juegos predeterminadas y otras caracter\u00EDsticas casi sin saber programaci\u00F3n. El game engine que vamos a utilizar es Construct 2, un game engine usado en juegos de la Web.`
+                            'Lo mejor es y ser\u00E1 siempre el cd\u00F3igo. Todo videojuego, pasa por el c\u00F3digo sin falta, ya que es lo que mueve el juego y los programas utilizados durante el desarrollo. Por lo general, para no perder tiempo en el proceso y ahorrar gastos innecesarios, las empresas utilizan lo que se llama un "game engine" o "motor de juego", el cual es un software que realiza ciertas tareas b\u00E1sicas de los videojuegos por nosotros adem\u00E1s nos deja implementar nuestras mejoras sobre plantillas de juegos predeterminadas y otras caracter\u00EDsticas casi sin saber programaci\u00F3n. El game engine que vamos a utilizar es Construct 2, un game engine usado en juegos de la Web.',
                         ]}
                     />
                 </Screen>
                 <Screen
-                    id={6} prev={5} next={6} initial={INITIAL.SlideToUp} animate={ANIMATE.SlideToUp} exit={EXIT.SlideToUp} >
+                    id={6} prev={5} next={6} initial={INITIAL.Fade} animate={ANIMATE.Fade} exit={EXIT.Fade} >
                     <SectionTitle title={"Gracias por su atenci\u00F3n"} />
                 </Screen>
             </Navigator>

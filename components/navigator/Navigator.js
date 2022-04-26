@@ -24,13 +24,13 @@ const Navigator = ({ children, homeScreenId }) => {
         let aux = screens;
         aux[activeScreen] = false;
         aux[screenId] = true;
-        setActiveScreen(screenId);
         setScreens(aux);
+        setActiveScreen(screenId);
     };
     useEffect(() => {
         setScreens(loadScreens());
         console.log("Navigator Screens:", screens);
-    }, []);
+    }, [activeScreen]);
     const data = {
         navigate,
         screens,

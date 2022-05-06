@@ -19,7 +19,7 @@ const App = () => {
             <Navigator homeScreenId={0} >
                 <Screen
                     id={0} prev={0} next={1} initial={INITIAL.SlideToUp} animate={ANIMATE.SlideToUp} exit={EXIT.SlideToUp} >
-                    <Title title={"Creaci\u00F3n de Videojuegos"} subtitle={"ft. Construct 2"} />
+                    <Title title={"Creaci\u00F3n de Videojuegos"} subtitle={"ft. JustForFun"} />
                 </Screen>
                 <Screen
                     id={1} prev={0} next={2} initial={INITIAL.Fade} animate={ANIMATE.Fade} exit={EXIT.Fade} >
